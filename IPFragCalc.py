@@ -1,5 +1,6 @@
 import argparse
 from argparse import RawTextHelpFormatter
+import math
 
 usageInfo = "Example usage:\npython3 IPFragCalc.py --dataSize 5144 --MTU 1500 --fragIdentifier y --headerSize 20"
 
@@ -36,7 +37,6 @@ while remaining > 0:
         fragFlag = 0
         remaining = 0
     remaining = remaining - (length - headerSize)
-    print('| {:>10} | {:>5} | {:>8} | {:>8.0f} | {:>23} |'.format(length, fragIdentifier, fragFlag, offset,
-                                                                  length - headerSize))
-    offset = offset + ((length - headerSize) / 8)
+    print('| {:>10} | {:>5} | {:>8} | {:>8.0f} | {:>23} |'.format(length, fragIdentifier, fragFlag, int(math.ceil(offset)), length - headerSize))
+    offset = offset + (((length - headerSize) / 8))
     i += 1
