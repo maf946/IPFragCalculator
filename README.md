@@ -3,15 +3,6 @@ A teaching tool for IP fragmentation
 
 ## Usage (for IST 220 students)
 
-Download the file `IPFragCalc.py` to your virtual machine. Open the Terminal, `cd` to the folder where the file downloaded, and then run `python3 IPFragCalc.py`. 
+Copy the contents the file [IPFragCalc.py](https://raw.githubusercontent.com/maf946/IPFragCalculator/main/IPFragCalc.py). Create a new PyCharm project, and make sure to check the "Create a main.py welcome scrip" checkbox at the bottom of the "Create Project" window. Delete all of the text in main.py, and then paste in the contents of the IPFragCalc.py file. Then, Run the project.
 
-When you run the program, you can choose to assign values for the datagram length, the MTU, the fragment identifier, and the header size. By default, the following values are used:
-
-|            Argument | Default Value |
-|--------------------:|:-------------:|
-|     Datagram length | 4000          |
-|                 MTU | 1500          |
-| Fragment idenfifier | x             |
-|         Header size | 20            |
-
-To see how to customize these values, run `python3 IPFragCalc.py --help`.
+Note that you can change any of the values on lines 3-6, depending on the problem you are trying to solve.
